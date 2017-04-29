@@ -1,0 +1,14 @@
+
+<div class="container">
+
+<h1>
+  {{title}}
+</h1>
+Hello {{name}}. The time is: {{time | date:  'MMM dd, yyyy - HH:mm:ss'}}
+  <div class="well well-sm">
+    <button routerLink="todo" class="btn btn-default"><i class="fa fa-list"></i> Todo</button>
+    <button routerLink="about" class="btn btn-default"><i class="fa fa-info"></i> About</button>
+  </div>
+
+<router-outlet></router-outlet>
+</div>

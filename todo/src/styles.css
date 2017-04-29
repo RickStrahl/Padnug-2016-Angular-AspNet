@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+h1, h2, h3, h4,h5,h6,.page-header-text {
+    font-family: Trebuchet, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+.page-header-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:  #0092d0;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e1e1e1;
+}

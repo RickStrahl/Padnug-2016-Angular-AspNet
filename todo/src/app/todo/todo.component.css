@@ -1,0 +1,46 @@
+form input:not(.ng-pristine).ng-invalid,
+select:not(.ng-pristine).ng-invalid, textarea:not(.ng-pristine).ng-invalid
+{
+    background: lightpink;
+    border-left: 5px solid red;
+}
+form input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=file]):not(.ng-pristine).ng-valid,
+select:not(.ng-pristine).ng-invalid, textarea:not(.ng-pristine):not(.ng-untouched).ng-valid
+{
+    background: #adfbdc;
+    border-left: 5px solid green;
+}
+
+.todo-item {
+    padding: 5px;
+    border-bottom: 1px solid silver;
+    transition: opacity 1200ms ease-out;
+}
+.todo-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #457196;
+}
+.todo-content {
+    padding-left: 30px;
+}
+.todo-item .fa-check {
+    color: green !important;
+    font-size: 1.5em;
+}
+
+.todo-item .fa-pencil-square-o {
+    color: firebrick !important;
+    font-size: 1.5em;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.todo-item .fa-remove {
+    color: firebrick;
+    cursor: pointer;
+}
+.completed {
+    text-decoration: line-through;
+    font-style: italic;
+    opacity: 0.4;
+}

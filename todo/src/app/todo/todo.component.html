@@ -1,0 +1,65 @@
+<div class="page-header-text">
+  <i class="fa fa-tag"></i>
+  ToDo List
+</div>
+
+<div class="alert alert-warning" *ngIf="message">
+  <i class="fa fa-exclamation-triangle"></i>
+  {{message}}
+</div>
+
+
+<div class="well">
+  <form name="form1" id="form1" #form1="ngForm">
+    <div class="form-group">
+      <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar-o"></i>
+                    </span>
+        <input type="text" class="form-control"
+               id="title" name="title"
+               [(ngModel)]="activeTodo.title"
+               placeholder="Enter the title for this ToDo"
+               required #title />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <!--<label class="control-label" for="form-group-input">Description:</label>-->
+      <textarea class="form-control"
+                id="description" name="description"
+                style="height: 100px"
+                [(ngModel)]="activeTodo.description"
+                minlength="10"
+                placeholder="Enter the description for this placeholder"
+                required
+                #description="ngModel"></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="button"
+            (click)="saveTodo(activeTodo,form1)"
+            [disabled]="form1.invalid">
+      <i class="fa fa-check-circle-o"></i> Save Todo
+    </button>
+    <button class="btn btn-primary" type="button"
+            (click)="loadTodos()">
+      <i class="fa fa-download"></i>
+      Load ToDos</button>
+  </form>
+</div>
+
+<div *ngFor="let todo of todos" class="todo-item"
+
+     [ngClass]="{completed: todo.completed}"
+     (click)="editTodo(todo)"
+>
+  <div class="pull-left" (click)="toggleCompleted(todo)"
+       >
+    <i class="fa" [ngClass]="{'fa-pencil-square-o': !todo.completed, 'fa-check': todo.completed}"></i>
+  </div>
+  <div class="pull-right" (click)="removeTodo(todo)">
+    <i class="fa fa-remove"></i>
+  </div>
+  <div class="todo-header">{{todo.title}}</div>
+  <div class="todo-content">{{todo.description}}</div>
+</div>
