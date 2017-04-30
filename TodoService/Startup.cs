@@ -48,7 +48,7 @@ namespace TodoService
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseCors("CorsPolicy");    
+            //app.UseCors("CorsPolicy");    
             app.UseMvc();
 
             Console.WriteLine(System.Runtime.InteropServices.RuntimeInformation.OSDescription);
