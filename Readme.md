@@ -6,7 +6,8 @@ This is the basic sample application from the PadNug presentation from May 2nd, 
 
 ### Resources
 
-* [Slides (much more than presented)]()
+* [Slides (much more than presented)](https://github.com/RickStrahl/Padnug-2016-Angular-AspNet/raw/master/PadNug_Angular_AspNetCore.pptx)
+* [AlbumViewer Sample Application Repo](https://github.com/RickStrahl/AlbumViewerVNext)
 
 
 ### Configuration
