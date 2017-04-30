@@ -48,6 +48,10 @@ namespace TodoService
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            // enable this to allow self contained serving of static files 
+            // from the wwwwroot folder            
+            app.UseStaticFiles(); 
+
             //app.UseCors("CorsPolicy");    
             app.UseMvc();
 
