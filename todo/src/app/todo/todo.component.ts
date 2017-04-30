@@ -106,6 +106,8 @@ export class TodoComponent implements OnInit {
 }
 
 export class TodoItem {
-  description = '';
-  completed: boolean;
+    title: string;
+    description: string;
+    completed: boolean;
+    entered: Date = new Date();
 }

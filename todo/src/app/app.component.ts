@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Hello from PADNUG!';
   time = new Date();
+  name = '';
 
   constructor() {
     setInterval( () => {
